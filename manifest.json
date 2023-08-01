@@ -1,0 +1,22 @@
+{
+    "name": "UB Tarefas",
+    "description": "Veja suas tarefas pedentes do seu curso",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": [
+        "activeTab"
+    ],
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": {
+            "16": "./assents/image/ub-logo3.png",
+            "48": "./assents/image/ub-logo3.png",
+            "128": "./assents/image/ub-logo3.png"
+        }
+    },
+    "icons": {
+        "16": "./assents/image/ub-logo3.png",
+        "48": "./assents/image/ub-logo3.png",
+        "128": "./assents/image/ub-logo3.png"
+    }
+}

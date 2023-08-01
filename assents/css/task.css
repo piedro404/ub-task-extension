@@ -1,0 +1,154 @@
+.task {
+    width: 95%;
+    height: 95%;
+}
+
+.logo {
+    width: 15%;
+    margin-bottom: 20px;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 50px;
+    margin-bottom: 10px;
+}
+
+.perfil p {
+    font-size: 1.2rem;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    justify-content: center;
+    background: var(--red);
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+    padding: 10px 15px;
+    color: var(--white);
+    border-radius: 5px;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.btn:disabled {
+    background: var(--gray);
+    cursor: default;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 96%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    border: 1px solid rgba(0,0,0,.35);
+}
+
+.content .infos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.content .reload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.content .reload .btn{
+    padding: 10px 10px;
+}
+
+.content .reload .btn img{
+    width: 25px;
+    height: 20px;
+}
+
+.tasks {
+    display: flex;
+    width: 100%;
+    font-size: 0.5rem;
+    flex-direction: column;
+    margin: 10px 0;
+    height: 250px;
+    overflow: auto;
+}
+
+.tasks .task {
+    display: flex;
+    width: 100%;
+    height: 115px;
+    flex-direction: column;
+    border-top: 1px solid rgba(0,0,0,.50);
+    border-bottom: 1px solid rgba(0,0,0,.50);
+    padding: 10px 10px 15px 10px;
+    margin: 5px 0;
+} 
+
+.tasks .task .row {
+    display: flex;
+    width: 100%;
+    margin: 5px;
+    align-items: center;
+}
+
+.tasks .task .row .time {
+    display: flex;
+    font-size: 0.7rem;
+    align-items: center;
+}
+
+.tasks .task .row .time img {
+    background-color: var(--clr);
+    margin: 0 5px;
+    padding: 5px;
+}
+
+.tasks .task .row .info {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    font-size: 0.7rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tasks .task .row .info a {
+    text-decoration: none;
+    color: var(--dark);
+    transition: all 0.2s ease;
+}
+
+.tasks .task .row .info a:hover {
+    color: var(--red);
+}
+
+.tasks .task .view {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+
+.tasks .task .view .btnView {
+    background: var(--white);
+    border-radius: 4px;
+    padding: 4px 15px;
+    border: 1px solid;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--black);
+}
