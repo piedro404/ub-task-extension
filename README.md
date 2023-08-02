@@ -1,6 +1,8 @@
 # Extensão de Tarefas - Unibalsas 
 Esta extensão foi feita incorporando a API "[ub-task-api](https://github.com/piedro404/ub-task-api/tree/main)" no meu repostitorio. Esta extensão vem como ideia para Unibalsas de um possivel aplicação que inovaria a forma de que seus alunos acessem sua atividades, ajundo na vizualização e gerenciamento dos prazos das tarefas e TED's.
 
+OBS.: Projeto é somente um teste, a API que alimenta a aplicação é provissoria, podendo acarretar a erros.
+
 ### Login
 ![2023-08-01_16h11_11](https://github.com/piedro404/ub-task-extension/assets/88720549/fb57388c-a675-471e-905e-26f20834391c)
 
@@ -27,12 +29,9 @@ Acesse a [documentação da API](https://api-ub.pedroplayborges.repl.co/docs) e 
 
 2. Veja as Atividade e recarrege para visualizar novas atividades.
    
-![image](https://github.com/piedro404/ub-task-extension/assets/88720549/29a9cbbd-85ae-4603-a0f5-f80bf1e2e906)
+![2023-08-02_10h14_42](https://github.com/piedro404/ub-task-extension/assets/88720549/b6deb09f-25bb-434d-92b9-10e4f9a9e018)
 
 ## Instalação
-### Pré-requisitos
-
-Certifique-se de ter o Python 3 instalado. Você também pode criar um ambiente virtual para isolar as dependências do projeto.
 
 1. Clone este repositório ou faça download aqui:
    
@@ -45,19 +44,5 @@ Certifique-se de ter o Python 3 instalado. Você também pode criar um ambiente 
    pip install -r requirements.txt
    ```
 
-### Executando a API
-
-1. Execute o seguinte comando para iniciar a API:
-
-   ```bash
-   python main.py
-   ```
-2. A API será executada localmente em http://localhost:8000.
-
-## Licença
-Este projeto está licenciado sob a Licença MIT. Por favor, inclua a seguinte referência no seu trabalho derivado:
-<br>
-- API de Tarefas - Unibalsas - desenvolvida por [Piedro404](https://github.com/piedro404) sob a Licença MIT.
-
-
+## Sobre
 Obrigado a todos, desejo otimos estudos, caso queira, entre em contato em pedro.henrique.martins404@gmail.com.
