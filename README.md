@@ -14,7 +14,6 @@ OBS.: Projeto é somente um teste, a API que alimenta a aplicação é provissor
 - Tarefas: Verifica se o usuario logado possui tarefas a serem realizado, listando-as para o usuário
 
 [UNIBALSAS](https://www.unibalsas.edu.br/)
-[API](https://github.com/piedro404/ub-task-api/tree/main)
 
 A aplicação funciona assim:
 Ela realizar request's para a API que retorna os dados para a aplicação. Depois mostrada visualmente pela extensão.
@@ -33,16 +32,15 @@ Acesse a [documentação da API](https://api-ub.pedroplayborges.repl.co/docs) e 
 
 ## Instalação
 
-1. Clone este repositório ou faça download aqui:
+1. Clone este repositório ou faça download [aqui](https://www.mediafire.com/file/3jf6s8cdt2xs8cj/ubQuests.rar/file):
    
    ```bash
    git clone https://github.com/piedro404/ub-task-api.git
    ```
 2. Instale no navegador, no gerenciamento de extensão:
    
-   ```bash
-   pip install -r requirements.txt
-   ```
+![2023-08-02_10h59_08](https://github.com/piedro404/ub-task-extension/assets/88720549/01cbee96-4724-4d90-a1b8-61c9e752cc8a)
+
 
 ## Sobre
 Obrigado a todos, desejo otimos estudos, caso queira, entre em contato em pedro.henrique.martins404@gmail.com.
