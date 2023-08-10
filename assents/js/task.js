@@ -83,7 +83,7 @@ user.innerHTML=localStorage.getItem('name').split(' ')[0];
 const fetchAPI = async (username, password) => {
     try {
         // const APIResponse = await fetch(`http://127.0.0.1:8000/ub/atv/${username}&${password}`);
-        const APIResponse = await fetch(`https://api-ub.pedroplayborges.repl.co/ub/atv/${username}&${password}`);
+        const APIResponse = await fetch(`https://ub-task-api.vercel.app/ub/atv/${username}&${password}`);
         
         if (APIResponse.status == 200){
             const data = await APIResponse.json();
