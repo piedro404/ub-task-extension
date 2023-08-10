@@ -32,7 +32,7 @@ Acesse a [documentação da API](https://ub-task-api.vercel.app/docs) e acesse o
 
 ## Instalação
 
-1. Clone este repositório ou faça download [aqui](https://www.mediafire.com/file/yndxkppudmd7vjf/ub-task-extension.rar/file):
+1. Clone este repositório ou faça download [aqui](https://www.mediafire.com/file/5a2hcbup9qq2bdk/ub-task-extension.rar/file):
    
    ```bash
    git clone https://github.com/piedro404/ub-task-api.git
