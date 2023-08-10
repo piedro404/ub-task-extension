@@ -19,7 +19,7 @@ A aplicação funciona assim:
 Ela realizar request's para a API que retorna os dados para a aplicação. Depois mostrada visualmente pela extensão.
 
 ## Documentação
-Acesse a [documentação da API](https://api-ub.pedroplayborges.repl.co/docs) e acesse o repositorio da [API](https://github.com/piedro404/ub-task-api/tree/main) para obter informações detalhadas sobre os endpoints, parâmetros e testes de requisições.
+Acesse a [documentação da API](https://ub-task-api.vercel.app/docs) e acesse o repositorio da [API](https://github.com/piedro404/ub-task-api/tree/main) para obter informações detalhadas sobre os endpoints, parâmetros e testes de requisições.
 
 ### Como usar
 1. Faça o Login com sua matricula e senha na extenção.
@@ -27,12 +27,12 @@ Acesse a [documentação da API](https://api-ub.pedroplayborges.repl.co/docs) e 
 ![image](https://github.com/piedro404/ub-task-extension/assets/88720549/63b2a7ed-5588-4d6d-9416-59aaa53b6360)
 
 2. Veja as Atividade e recarrege para visualizar novas atividades.
-   
-![2023-08-02_10h14_42](https://github.com/piedro404/ub-task-extension/assets/88720549/b6deb09f-25bb-434d-92b9-10e4f9a9e018)
+
+![2023-08-10_14h49_51](https://github.com/piedro404/ub-task-extension/assets/88720549/819f1573-233f-48ca-98dd-7e76f4a12118)
 
 ## Instalação
 
-1. Clone este repositório ou faça download [aqui](https://www.mediafire.com/file/3jf6s8cdt2xs8cj/ubQuests.rar/file):
+1. Clone este repositório ou faça download [aqui](https://www.mediafire.com/file/yndxkppudmd7vjf/ub-task-extension.rar/file):
    
    ```bash
    git clone https://github.com/piedro404/ub-task-api.git
