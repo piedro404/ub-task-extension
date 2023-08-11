@@ -1,7 +1,7 @@
 const alertSpan = document.querySelector('.login__label.alert');
 const button = document.querySelector('.login__label.btn .submit');
 
-if(localStorage.getItem('username') !== '' && localStorage.getItem('password') !== ''){
+if(localStorage.getItem('username') && localStorage.getItem('password')){
     window.location.href = 'task.html';
 }
 

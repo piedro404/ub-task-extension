@@ -76,9 +76,10 @@ const colors = [
 
 if(!(localStorage.getItem('username') && localStorage.getItem('password'))){
     window.location.href = 'index.html';
+} 
+else {
+    user.innerHTML=localStorage.getItem('name').split(' ')[0];
 }
-
-user.innerHTML=localStorage.getItem('name').split(' ')[0];
 
 const fetchAPI = async (username, password) => {
     try {
