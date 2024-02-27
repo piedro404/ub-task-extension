@@ -1,22 +1,22 @@
 {
     "name": "UB Tarefas",
-    "description": "Veja suas tarefas pedentes do seu curso",
-    "version": "1.0",
+    "description": "Acesse suas atividades pendentes de forma rápida e fácil! Gerencie prazos, tarefas e avaliações com uma interface intuitiva que redireciona para a página.",
+    "version": "1.5",
     "manifest_version": 3,
     "permissions": [
         "activeTab"
     ],
     "action": {
-        "default_popup": "index.html",
+        "default_popup": "src/assents/html/index.html",
         "default_icon": {
-            "16": "./assents/image/ub-logo3.png",
-            "48": "./assents/image/ub-logo3.png",
-            "128": "./assents/image/ub-logo3.png"
+            "16": "src/assents/image/icon.png",
+            "48": "src/assents/image/icon.png",
+            "128": "src/assents/image/icon.png"
         }
     },
     "icons": {
-        "16": "./assents/image/ub-logo3.png",
-        "48": "./assents/image/ub-logo3.png",
-        "128": "./assents/image/ub-logo3.png"
+        "16": "src/assents/image/icon.png",
+        "48": "src/assents/image/icon.png",
+        "128": "src/assents/image/icon.png"
     }
 }
