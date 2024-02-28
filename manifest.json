@@ -18,5 +18,12 @@
         "16": "src/assents/image/icon.png",
         "48": "src/assents/image/icon.png",
         "128": "src/assents/image/icon.png"
+    },
+    "homepage_url": "https://github.com/piedro404/ub-task-extension",
+    "author": {
+        "name": "Pedro Henrique Martins Borges",
+        "email": "pedro.borges@alu.unibalsas.edu.br",
+        "url": "https://github.com/piedro404",
+        "linkedin": "https://www.linkedin.com/in/pedrohenrique404/"
     }
 }
