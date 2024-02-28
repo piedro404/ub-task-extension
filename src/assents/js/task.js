@@ -74,31 +74,43 @@ const colors = [
 ];
 
 
-if(!(localStorage.getItem('username') && localStorage.getItem('password'))){
+if(!(localStorage.getItem('login') && localStorage.getItem('password'))){
     window.location.href = 'index.html';
 } 
 else {
     user.innerHTML=localStorage.getItem('name').split(' ')[0];
 }
 
-const fetchAPI = async (username, password) => {
+const fetchAPI = async (login, password) => {
     try {
-        // const APIResponse = await fetch(`http://127.0.0.1:8000/ub/atv/${username}&${password}`);
-        const APIResponse = await fetch(`https://ub-task-api.vercel.app/ub/atv/${username}&${password}`);
-        
-        if (APIResponse.status == 200){
+        // const url = 'http://127.0.0.1:3000/ub/task';
+        const url = 'https://ub-task-api.vercel.app/ub/task';
+        const credentials = { login: login, password: password };
+
+        const APIResponse = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(credentials)
+        });
+
+        if (APIResponse.status === 200) {
             const data = await APIResponse.json();
             return data;
+        } else {
+            return { status: false };
         }
-    } catch {
-        return {'status':false};
+    } catch (error) {
+        console.log('Erro:', error);
+        return { status: false };
     }
-}
+};
 
 const renderTasks = (data) => {
     try {
         tasks.innerHTML = '';
-        data['list'].forEach(task => {
+        data['tasks']['list_tasks'].forEach(task => {
             const card = document.createElement('div');
             card.classList.add("task");
     
@@ -110,15 +122,15 @@ const renderTasks = (data) => {
                 <div class="row">
                     <div class="time">
                         <span>${task['time_limit']}</span>
-                        <img src="assents/image/monologo.svg" alt="task" style="--clr:${randomColor};">
+                        <img src="../image/monologo.svg" alt="task" style="--clr:${randomColor};">
                     </div>
                     <div class="info">
-                        <h4><a href="${task['link_atv']}" target="_blank">${task['name']}</a></h4>
-                        <span>${task['mat']}</span>
+                        <h4><a href="${task['url_task']}" target="_blank">${task['task_name']}</a></h4>
+                        <span>${task['matter']}</span>
                     </div>
                 </div>
                 <div class="view">
-                    <a href="${task['link_atv']}" class="btnView" target="_blank">Ver Atividade</a>
+                    <a href="${task['url_task']}" class="btnView" target="_blank">Ver Atividade</a>
                 </div>
                 `
     
@@ -134,9 +146,9 @@ const renderTasks = (data) => {
 
 const setTasks = (data) => {
     if(data['status']){
-        description.innerHTML = data['description'];
-        localStorage.setItem('task', JSON.stringify(data));
-        if(data['atv']){
+        description.innerHTML = data['tasks']['description'];
+        localStorage.setItem('tasks', JSON.stringify(data));
+        if(data['tasks']['find_task']){
             renderTasks(data);
         }
         else{
@@ -150,13 +162,13 @@ const setTasks = (data) => {
 }
 
 const getTasks = async () => {
-    const data = await fetchAPI(localStorage.getItem('username'), localStorage.getItem('password'));
+    const data = await fetchAPI(localStorage.getItem('login'), localStorage.getItem('password'));
 
     setTasks(data);
 }
 
-if(localStorage.getItem('task') !== ''){
-    setTasks(JSON.parse(localStorage.getItem('task')));
+if(localStorage.getItem('tasks') !== ''){
+    setTasks(JSON.parse(localStorage.getItem('tasks')));
 }  
 else {
     getTasks();
@@ -166,7 +178,7 @@ const logoutBtn = () => {
     localStorage.setItem('username', '');
     localStorage.setItem('password', '');
     localStorage.setItem('name', '');
-    localStorage.setItem('task', '');
+    localStorage.setItem('tasks', '');
 
     window.location.href = 'index.html';
 }
@@ -181,6 +193,3 @@ reload.addEventListener('click', async function(){
     await getTasks();
     reload.disabled = false;
 })
-
-
-
