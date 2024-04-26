@@ -11,8 +11,9 @@
     --white: #FFF;
     --black: #000;
     --grey: #E4E8EB;
-    --red: #CF3C3F;
-    --blue: #0f6cbf;;
+    --red: #6c0000e0;
+    --yellow:#daac25;
+    --blue: #0f6cbf;
     --deep-grey: #343434;
     --gray: #b1b2b3;
     --dark: #273847; 
@@ -28,7 +29,7 @@ section {
     display: flex;
     width: 100%;
     height: 100%;
-    background: #6c0000e0;
+    background: var(--red);
     align-items: center;
     justify-content: center;
     border: 4px solid var(--red);

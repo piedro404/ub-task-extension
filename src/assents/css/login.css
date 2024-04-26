@@ -15,7 +15,7 @@
 }
 
 .underline{
-    border: 1px #6c0000e0 solid;
+    border: 1px var(--red) solid;
     margin: 10px 0 10px;
     width: 80%; 
 }
@@ -30,13 +30,13 @@
 .login__label span {
     font-size: 1em;
     font-weight: 600;
-    color: #6c0000e0;    
+    color: var(--red);    
 }
 
 .input {
     width: 100%;
     background: var(--white);
-    border: 2px solid #6c000073;
+    border: 2px solid var(--red);
     border-radius: 35px;
     outline: none;
     font-size: 0.9em;
@@ -47,7 +47,7 @@
 }
 
 .input:focus {
-    border: 2px solid #6c0000e0;
+    border: 2px solid var(--red);
 }
 
 .login__label.link {
@@ -57,14 +57,14 @@
 .login__label.link a {
     font-size: 0.9em;
     text-decoration: underline;
-    color: #6c0000e0;
+    color: var(--red);
     margin-bottom: 5px;
     font-weight: 700;
     transition: all .5s ease;
 }
 
 .login__label.link a:hover {
-    color: #daac25;
+    color: var(--yellow);
 }
 
 .login__label.btn {
@@ -79,7 +79,7 @@
     align-items: center;
     gap: 10px;
     width: 35%;
-    background: #6c0000e0;
+    background: var(--red);
     border: none;
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
     padding: 10px 15px;
@@ -90,7 +90,7 @@
 }
 
 .login__label.btn .submit:hover {
-    background:  #daac25;
+    background:  var(--yellow);
 }
 
 .login__label.btn .submit:disabled {
@@ -131,6 +131,9 @@
 }
 
 .credits{
+    display: flex;
+    align-items: center;
+    gap: 5px;
     font-size: 0.8rem;
     color: rgba(32, 30, 30, 0.575);
     margin-top: 20px;
@@ -138,4 +141,9 @@
 
 .credits a{
     color: rgba(32, 30, 30, 0.575);
+}
+
+.credits a img{
+    width: 20px;
+    height: 20px;
 }
