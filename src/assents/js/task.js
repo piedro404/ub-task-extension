@@ -1,5 +1,6 @@
 const logout = document.getElementById("logout");
 const user = document.querySelector('.hi');
+const img_user = document.getElementById('img_user');
 const reload = document.getElementById("reload");
 const description = document.querySelector('.description');
 const tasks = document.querySelector('.tasks');
@@ -78,6 +79,7 @@ if(!(localStorage.getItem('login') && localStorage.getItem('password'))){
     window.location.href = 'index.html';
 } 
 else {
+    img_user.innerHTML = "<img src = ' " + localStorage.getItem('user_picture') + " '>";
     user.innerHTML=localStorage.getItem('name').split(' ')[0];
 }
 

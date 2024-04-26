@@ -10,6 +10,7 @@ const authenticatedRedirect = async (data, login, password) => {
         localStorage.setItem('login', login);
         localStorage.setItem('password', password);
         localStorage.setItem('name', data['profile']['name']);
+        localStorage.setItem('user_picture', data['profile']['user_picture']);
         localStorage.setItem('tasks', '');
 
         console.log(data)
