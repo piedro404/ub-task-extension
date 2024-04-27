@@ -80,7 +80,7 @@ if(!(localStorage.getItem('login') && localStorage.getItem('password'))){
 } 
 else {
     img_user.innerHTML = "<img src = ' " + localStorage.getItem('user_picture') + " '>";
-    user.innerHTML=localStorage.getItem('name').split(' ')[0];
+    user.innerHTML=localStorage.getItem('name').split(' ')[0] + " " +localStorage.getItem('name').split(' ')[1];
 }
 
 const fetchAPI = async (login, password) => {
