@@ -1,5 +1,5 @@
 const logout = document.getElementById("logout");
-const user = document.querySelector('.hi');
+const user = document.getElementById('user_name');
 const img_user = document.getElementById('img_user');
 const reload = document.getElementById("reload");
 const description = document.querySelector('.description');
@@ -74,14 +74,20 @@ const colors = [
     '#FFF0F5'
 ];
 
+const replaceStringElements = (my_string) => {
+    new_string = my_string.replace(/<[^>]*>?/g, '')
+    return new_string;
+}
 
 if(!(localStorage.getItem('login') && localStorage.getItem('password'))){
     window.location.href = 'index.html';
 } 
 else {
-    img_user.innerHTML = "<img src = ' " + localStorage.getItem('user_picture') + " '>";
-    user.innerHTML=localStorage.getItem('name').split(' ')[0] + " " +localStorage.getItem('name').split(' ')[1];
+    img_user.src = replaceStringElements(localStorage.getItem('user_picture'))
+    user.textContent = replaceStringElements(localStorage.getItem('name').split(' ')[0] + " " +localStorage.getItem('name').split(' ')[1]);
 }
+
+// console.log(replaceStringElements())
 
 const fetchAPI = async (login, password) => {
     try {
@@ -109,56 +115,89 @@ const fetchAPI = async (login, password) => {
     }
 };
 
+const createTaskElement = (task) => {
+    const randomColor = colors[parseInt(Math.floor(Math.random() * colors.length))];
+
+    const card = document.createElement('div');
+    card.classList.add("task");
+
+    const h2 = document.createElement('h2');
+    h2.textContent = replaceStringElements(`${task['day_week']}, ${task['date']}`);
+
+    const rowDiv = document.createElement('div');
+    rowDiv.classList.add("row");
+
+    const timeDiv = document.createElement('div');
+    timeDiv.classList.add("time");
+
+    const timeSpan = document.createElement('span');
+    timeSpan.textContent = replaceStringElements(task['time_limit']);
+
+    const img = document.createElement('img');
+    img.src = replaceStringElements("../image/monologo.svg");
+    img.alt = replaceStringElements("task");
+    img.style.setProperty('--clr', randomColor);
+
+    const infoDiv = document.createElement('div');
+    infoDiv.classList.add("info");
+
+    const h4 = document.createElement('h4');
+    const a = document.createElement('a');
+    a.href = replaceStringElements(task['url_task']);
+    a.target = replaceStringElements("_blank");
+    a.textContent = replaceStringElements(task['task_name']);
+    h4.appendChild(a);
+
+    const matterSpan = document.createElement('span');
+    matterSpan.textContent = replaceStringElements(task['matter']);
+
+    const viewDiv = document.createElement('div');
+    viewDiv.classList.add("view");
+
+    const viewA = document.createElement('a');
+    viewA.href = replaceStringElements(task['url_task']);
+    viewA.classList.add("btnView");
+    viewA.target = replaceStringElements("_blank");
+    viewA.textContent = replaceStringElements("Ver Atividade");
+
+    timeDiv.appendChild(timeSpan);
+    timeDiv.appendChild(img);
+    infoDiv.appendChild(h4);
+    infoDiv.appendChild(matterSpan);
+    rowDiv.appendChild(timeDiv);
+    rowDiv.appendChild(infoDiv);
+    viewDiv.appendChild(viewA);
+    card.appendChild(h2);
+    card.appendChild(rowDiv);
+    card.appendChild(viewDiv);
+
+    return card;
+}
+
 const renderTasks = (data) => {
     try {
-        tasks.innerHTML = '';
+        tasks.textContent = '';
         data['tasks']['list_tasks'].forEach(task => {
-            const card = document.createElement('div');
-            card.classList.add("task");
-    
-            const randomIndex = Math.floor(Math.random() * colors.length);
-            const randomColor = colors[randomIndex];
-    
-            const taskCard = `
-                <h2>${task['day_week']}, ${task['date']}</h2>
-                <div class="row">
-                    <div class="time">
-                        <span>${task['time_limit']}</span>
-                        <img src="../image/monologo.svg" alt="task" style="--clr:${randomColor};">
-                    </div>
-                    <div class="info">
-                        <h4><a href="${task['url_task']}" target="_blank">${task['task_name']}</a></h4>
-                        <span>${task['matter']}</span>
-                    </div>
-                </div>
-                <div class="view">
-                    <a href="${task['url_task']}" class="btnView" target="_blank">Ver Atividade</a>
-                </div>
-                `
-    
-            card.innerHTML = taskCard;
-            tasks.appendChild(card);
+            tasks.appendChild(createTaskElement(task));
         });
     }
     catch {
-        // description.innerHTML = "Erro - Tentando Novamente!";
         getTasks();
     }
 }
 
 const setTasks = (data) => {
     if(data['status']){
-        description.innerHTML = data['tasks']['description'];
+        description.textContent = replaceStringElements(data['tasks']['description']);
         localStorage.setItem('tasks', JSON.stringify(data));
         if(data['tasks']['find_task']){
             renderTasks(data);
         }
         else{
-            tasks.innerHTML = '';
+            tasks.textContent = '';
         }
     }
     else {
-        // description.innerHTML = "Tente Novamente!";
         getTasks();
     }
 }
@@ -177,7 +216,7 @@ else {
 }
 
 const logoutBtn = () => {
-    localStorage.setItem('username', '');
+    localStorage.setItem('name', '');
     localStorage.setItem('password', '');
     localStorage.setItem('name', '');
     localStorage.setItem('tasks', '');
@@ -191,7 +230,7 @@ logout.addEventListener('click', function(){
 
 reload.addEventListener('click', async function(){
     reload.disabled = true;
-    description.innerHTML = "Carregando!";
+    description.textContent = replaceStringElements("Carregando!");
     await getTasks();
     reload.disabled = false;
 })
