@@ -1,10 +1,10 @@
 # Extensão de Tarefas - Unibalsas ⚒️
 
-[![Download](https://img.shields.io/badge/Download-Latest%20Version-blue)](https://www.mediafire.com/file/prjm74vzxxqa86z/ub-task-extension.rar/file)
+[![Download](https://img.shields.io/badge/Download-Latest%20Version-blue)](https://www.mediafire.com/file/2vje3ppho5ruobo/ub-task-extension.rar/file)
 
 Esta extensão foi feita incorporando a API "[ub-task-api](https://github.com/piedro404/ub-task-api/tree/main)" no meu repositório. Esta extensão vem como ideia para Unibalsas de um possível aplicação que inovaria a forma de que seus alunos acessem suas atividades, ajudando na visualização e gerenciamento dos prazos das tarefas e TED's.
 
-![ub-ext](https://github.com/piedro404/ub-task-extension/assets/88720549/644ad8d4-c6ad-4a84-91ce-5306317baa10)
+<img src="https://github.com/piedro404/ub-task-extension/assets/88720549/40ca4036-bb5b-4c95-b1fc-185c6c3bee54" width="500">
 
 # Recursos 🔨
 - Login: Valida login e salva os dados no navegador para evitar repetir o processo
@@ -24,11 +24,11 @@ Quando a API receber uma solicitação URL com tal função, seja por GET ou POS
 # Como usar 💁‍♀️
 1. Faça o Login com sua matrícula e senha na extensão.
    
-![image](https://github.com/piedro404/ub-task-extension/assets/88720549/63b2a7ed-5588-4d6d-9416-59aaa53b6360)
+<img width="451" alt="2024-04-30_14h39_52" src="https://github.com/piedro404/ub-task-extension/assets/88720549/024c7772-60b0-4c5a-a766-f06645ddc242">
 
 2. Veja as Atividade e recarregue para visualizar novas atividades.
 
-![2023-08-10_14h49_51](https://github.com/piedro404/ub-task-extension/assets/88720549/819f1573-233f-48ca-98dd-7e76f4a12118)
+<img width="451" alt="2024-04-30_14h40_37" src="https://github.com/piedro404/ub-task-extension/assets/88720549/668c29d2-37ea-4e1b-ba6f-a9e51501166f">
 
 # Instalação 📱
 
@@ -50,6 +50,11 @@ Quando a API receber uma solicitação URL com tal função, seja por GET ou POS
 #### Opera GX
 
 ![opera gx](https://github.com/piedro404/ub-task-extension/assets/88720549/6466afa5-c6ec-4d58-9161-51a58f62c9ab)
+
+# Contribuidores 🧑‍💻
+
+- [Matheus](https://github.com/Matheuz233) - Front-End 🎨
+- [Pedro Henrique](https://github.com/piedro404) - Back-End 🧩
 
 # Sobre 📒
 Obrigado a todos, desejo ótimos estudos, caso queira, entre em contato em pedro.henrique.martins404@gmail.com;
