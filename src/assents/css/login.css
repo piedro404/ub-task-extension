@@ -3,8 +3,13 @@
     height: 80%;
 }
 
+.login #loginform{
+    width: 80%;
+    height: 80%;
+}
+
 .logo {
-    width: 25%;
+    width: 20%;
     height: 100%;
     margin-bottom: 20px;
 }
@@ -14,6 +19,12 @@
     height: 100%;
 }
 
+.underline{
+    border: 1px var(--red) solid;
+    margin: 10px 0 10px;
+    width: 80%; 
+}
+
 .login__label {
     display: block;
     margin-bottom: 5px;
@@ -21,18 +32,23 @@
     padding: 0 10px;
 }
 
+.login__label input{
+    font-size: 1.05em;
+}
+
 .login__label span {
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: 600;
+    color: var(--red);    
 }
 
 .input {
     width: 100%;
     background: var(--white);
-    border: 2px solid rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+    border: 2px solid var(--red);
+    border-radius: 35px;
     outline: none;
-    font-size: 0.9em;
+    font-size: 1em;
     font-weight: 600;
     padding: 7px 15px;
     color: var(--deep-grey);
@@ -40,7 +56,7 @@
 }
 
 .input:focus {
-    border: 2px solid rgba(0, 0, 0, 1);
+    border: 2px solid var(--red);
 }
 
 .login__label.link {
@@ -48,8 +64,8 @@
 }
 
 .login__label.link a {
-    font-size: 0.9em;
-    text-decoration: none;
+    font-size: 1.1em;
+    text-decoration: underline;
     color: var(--red);
     margin-bottom: 5px;
     font-weight: 700;
@@ -57,32 +73,44 @@
 }
 
 .login__label.link a:hover {
-    color: var(--blue);
+    color: var(--yellow);
 }
 
 .login__label.btn {
     display: flex;
     justify-content: end;
+    
 }
 
 .login__label.btn .submit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    width: 35%;
     background: var(--red);
     border: none;
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
-    padding: 10px 15px;
+    padding: 10px 10px;
+    font-size: 1.2em;
     color: var(--white);
-    border-radius: 5px;
+    border-radius: 35px;
     transition: all .5s ease;
     cursor: pointer;
 }
 
 .login__label.btn .submit:hover {
-    background: var(--blue)
+    background:  var(--yellow);
 }
 
 .login__label.btn .submit:disabled {
     background: var(--gray);
     cursor: default;
+}
+
+.login__label.btn .submit img {
+    width: 20%;
 }
 
 .login__label.alert {
@@ -111,4 +139,22 @@
     opacity: 1;
     height: 50px;
     visibility: visible;
+}
+
+.credits{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    color: rgba(32, 30, 30, 0.575);
+    margin-top: 20px;
+}
+
+.credits a{
+    color: rgba(32, 30, 30, 0.575);
+}
+
+.credits a img{
+    width: 20px;
+    height: 20px;
 }

@@ -5,15 +5,15 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lexend Deca', sans-serif;
-    text-transform: uppercase;
 }
 
 :root {
     --white: #FFF;
     --black: #000;
     --grey: #E4E8EB;
-    --red: #CF3C3F;
-    --blue: #0f6cbf;;
+    --red: #6c0000e0;
+    --yellow:#daac25;
+    --blue: #0f6cbf;
     --deep-grey: #343434;
     --gray: #b1b2b3;
     --dark: #273847; 
@@ -29,10 +29,11 @@ section {
     display: flex;
     width: 100%;
     height: 100%;
-    background: var(--grey);
+    background: var(--red);
     align-items: center;
     justify-content: center;
     border: 4px solid var(--red);
+    border: 3px solid #FFC82A;
 }
 
 .conteiner {
@@ -44,6 +45,7 @@ section {
     align-items: center;
     justify-content: center;
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+    border-radius: 1rem;
 }
 
 .wrapper {

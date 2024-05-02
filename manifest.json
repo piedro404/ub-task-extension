@@ -1,11 +1,8 @@
 {
     "name": "UB Tarefas",
-    "description": "Acesse suas atividades pendentes de forma rápida e fácil! Gerencie prazos, tarefas e avaliações com uma interface intuitiva que redireciona para a página.",
-    "version": "1.5",
+    "description": "Acesse suas atividades pendentes da Unibalsas de forma rápida e fácil!",
+    "version": "3.0",
     "manifest_version": 3,
-    "permissions": [
-        "activeTab"
-    ],
     "action": {
         "default_popup": "src/assents/html/index.html",
         "default_icon": {
@@ -19,11 +16,5 @@
         "48": "src/assents/image/icon.png",
         "128": "src/assents/image/icon.png"
     },
-    "homepage_url": "https://github.com/piedro404/ub-task-extension",
-    "author": {
-        "name": "Pedro Henrique Martins Borges",
-        "email": "pedro.borges@alu.unibalsas.edu.br",
-        "url": "https://github.com/piedro404",
-        "linkedin": "https://www.linkedin.com/in/pedrohenrique404/"
-    }
+    "homepage_url": "https://github.com/piedro404/ub-task-extension"
 }
