@@ -1,3 +1,5 @@
+document.cookie="__Host-name=value; Secure; Path=/; SameSite=None; Partitioned;"
+
 const logout = document.getElementById("logout");
 const user = document.getElementById('user_name');
 const img_user = document.getElementById('img_user');
@@ -98,11 +100,14 @@ const fetchAPI = async (login, password) => {
         const APIResponse = await fetch(url, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'SameSite': 'None', 
+                'Secure': true 
             },
-            body: JSON.stringify(credentials)
+            body: JSON.stringify(credentials),
+            credentials: 'omit'
         });
-
+        
         if (APIResponse.status === 200) {
             const data = await APIResponse.json();
             return data;
